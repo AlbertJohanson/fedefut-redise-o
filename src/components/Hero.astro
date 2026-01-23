@@ -1,0 +1,869 @@
+---
+
+---
+
+<section class="hero" id="start">
+  <div class="hero-video-container">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <!-- Add your video source here -->
+      <source
+        src="https://res.cloudinary.com/ajweb/video/upload/v1769121835/YTDown.com_YouTube_Despues-de-decadas-Hoy-Si-Mucha_Media_t3ku4iHeyis_001_1080p_mk51zs.mp4"
+        type="video/mp4"
+      />
+    </video>
+    <div class="hero-video-overlay"></div>
+  </div>
+
+  <div class="hero-pattern"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="badge-text"
+        >Clasificatorias Femeninas Sub-17 de Concacaf 2026</span
+      >
+    </div>
+
+    <!-- Match Card -->
+    <div class="match-card">
+      <div class="match-card-glow"></div>
+
+      <!-- Match Header -->
+      <div class="match-header">
+        <span class="match-type">Próximo Partido</span>
+        <span class="match-round">Jornada 1</span>
+      </div>
+
+      <!-- Teams -->
+      <div class="match-teams">
+        <!-- Home Team -->
+        <div class="team team-home">
+          <div class="team-shield-container">
+            <div class="team-shield">
+              <img src="/images/logo-fedefut.png" />
+            </div>
+            <div class="team-shield-glow"></div>
+          </div>
+          <span class="team-code">GTM</span>
+          <span class="team-name">Guatemala</span>
+        </div>
+
+        <!-- VS Divider -->
+        <div class="match-vs">
+          <div class="vs-circle">
+            <span>VS</span>
+          </div>
+          <div class="match-datetime">
+            <span class="match-date">25 ENE 2026</span>
+            <span class="match-time">14:00 HRS</span>
+          </div>
+        </div>
+
+        <!-- Away Team -->
+        <div class="team team-away">
+          <div class="team-shield-container">
+            <div class="team-shield">
+              <img src="/images/cifa-logo.png" />
+            </div>
+            <div class="team-shield-glow"></div>
+          </div>
+          <span class="team-code">CAY</span>
+          <span class="team-name">Islas Cayman</span>
+        </div>
+      </div>
+
+      <!-- Countdown -->
+      <div class="match-countdown">
+        <div class="countdown-label">Faltan</div>
+        <div class="countdown-timer" id="countdown">
+          <div class="countdown-block">
+            <span class="countdown-number" id="days">00</span>
+            <span class="countdown-unit">Días</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-block">
+            <span class="countdown-number" id="hours">00</span>
+            <span class="countdown-unit">Hrs</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-block">
+            <span class="countdown-number" id="minutes">00</span>
+            <span class="countdown-unit">Min</span>
+          </div>
+          <span class="countdown-separator">:</span>
+          <div class="countdown-block">
+            <span class="countdown-number" id="seconds">00</span>
+            <span class="countdown-unit">Seg</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Venue Info -->
+      <div class="match-venue">
+        <div class="venue-icon">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+        </div>
+        <div class="venue-details">
+          <span class="venue-stadium">Stadion Rignaal ‘Jean’ Francisca</span>
+          <span class="venue-city">Willemstad, Curazao</span>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <a href="#calendario" class="match-cta">
+        <span>Ver Calendario Completo</span>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"></path></svg
+        >
+      </a>
+    </div>
+
+    <div class="hero-selection-tag">
+      <span class="selection-dot"></span>
+      <span class="selection-text">Selección Femenina Sub-17</span>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="hero-decor hero-decor-1"></div>
+    <div class="hero-decor hero-decor-2"></div>
+  </div>
+</section>
+
+<script>
+  // Countdown Timer
+  const targetDate = new Date("2026-01-25T14:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+
+    document.getElementById("days")!.textContent = days
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("hours")!.textContent = hours
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("minutes")!.textContent = minutes
+      .toString()
+      .padStart(2, "0");
+    document.getElementById("seconds")!.textContent = seconds
+      .toString()
+      .padStart(2, "0");
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--color-dark-blue);
+  }
+
+  .hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero-video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+      linear-gradient(
+        135deg,
+        rgba(0, 56, 118, 0.95) 0%,
+        rgba(13, 27, 42, 0.85) 100%
+      ),
+      radial-gradient(
+        ellipse at 30% 20%,
+        rgba(0, 102, 204, 0.3) 0%,
+        transparent 50%
+      );
+  }
+
+  .hero-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(
+      circle at 2px 2px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 0
+    );
+    background-size: 40px 40px;
+    z-index: 1;
+  }
+
+  /* Hero Content */
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 140px var(--space-6) var(--space-16);
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  .hero-badge {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: rgba(73, 151, 208, 0.15);
+    border: 1px solid rgba(73, 151, 208, 0.3);
+    padding: var(--space-2) var(--space-5);
+    border-radius: 50px;
+    margin-bottom: var(--space-8);
+    animation: fadeInDown 0.8s var(--ease-out) both;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .badge-text {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    color: var(--color-accent);
+  }
+
+  .match-card {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: var(--space-10);
+    animation: fadeInUp 0.8s var(--ease-out) 0.2s both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .match-card-glow {
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent),
+      var(--color-secondary),
+      var(--color-primary)
+    );
+    border-radius: 26px;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(20px);
+    animation: glowPulse 3s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%,
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.02);
+    }
+  }
+
+  /* Match Header */
+  .match-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .match-type {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+  }
+
+  .match-round {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: rgba(73, 151, 208, 0.15);
+    padding: var(--space-2) var(--space-4);
+    border-radius: 4px;
+  }
+
+  /* Teams Section */
+  .match-teams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-6);
+    margin-bottom: var(--space-8);
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    flex: 1;
+  }
+
+  .team-shield-container {
+    position: relative;
+    width: 210px;
+    height: 216px;
+  }
+
+  .team-shield img {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+
+  .team:hover .team-shield {
+    transform: scale(1.05);
+  }
+
+  .team-shield-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(
+      circle,
+      rgba(73, 151, 208, 0.3),
+      transparent 70%
+    );
+    border-radius: 50%;
+    z-index: -1;
+  }
+
+  .team-code {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+  }
+
+  .team-name {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* VS Divider */
+  .match-vs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+  }
+
+  .vs-circle {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      135deg,
+      var(--color-accent),
+      var(--color-accent-light)
+    );
+    border-radius: 50%;
+    box-shadow: var(--shadow-accent);
+  }
+
+  .vs-circle span {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--color-dark);
+  }
+
+  .match-datetime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-1);
+  }
+
+  .match-date {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+  }
+
+  .match-time {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  /* Countdown */
+  .match-countdown {
+    text-align: center;
+    margin-bottom: var(--space-8);
+    padding: var(--space-6);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+  }
+
+  .countdown-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: var(--space-4);
+  }
+
+  .countdown-timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .countdown-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+  }
+
+  .countdown-number {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--color-white);
+    line-height: 1;
+  }
+
+  .countdown-unit {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: var(--space-1);
+  }
+
+  .countdown-separator {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 20px;
+  }
+
+  /* Venue Info */
+  .match-venue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+    padding: var(--space-4);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: var(--space-6);
+  }
+
+  .venue-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-accent);
+    border-radius: 50%;
+    color: var(--color-dark);
+  }
+
+  .venue-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .venue-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .venue-stadium {
+    font-weight: 600;
+    color: var(--color-white);
+  }
+
+  .venue-city {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .match-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-5) var(--space-8);
+    background: linear-gradient(
+      135deg,
+      var(--color-secondary),
+      var(--color-primary)
+    );
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all var(--duration-normal) var(--ease-out);
+  }
+
+  .match-cta svg {
+    width: 20px;
+    height: 20px;
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+
+  .match-cta:hover {
+    background: linear-gradient(
+      135deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .match-cta:hover svg {
+    transform: translateX(4px);
+  }
+
+  .hero-selection-tag {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-8);
+    animation: fadeIn 0.8s var(--ease-out) 0.6s both;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .selection-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--color-accent);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+    }
+  }
+
+  .selection-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+
+  /* Scroll Indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: var(--space-10);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-3);
+    animation: fadeIn 1s var(--ease-out) 1s both;
+  }
+
+  .scroll-text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--color-accent), transparent);
+    animation: scrollLine 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollLine {
+    0% {
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+    50% {
+      transform: scaleY(1);
+      transform-origin: top;
+    }
+    50.1% {
+      transform: scaleY(1);
+      transform-origin: bottom;
+    }
+    100% {
+      transform: scaleY(0);
+      transform-origin: bottom;
+    }
+  }
+
+  /* Hero Decorations */
+  .hero-decor {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .hero-decor-1 {
+    top: 20%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(
+      circle,
+      rgba(0, 102, 204, 0.2) 0%,
+      transparent 70%
+    );
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .hero-decor-2 {
+    bottom: 20%;
+    left: 5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(
+      circle,
+      rgba(73, 151, 208, 0.1) 0%,
+      transparent 70%
+    );
+    animation: float 10s ease-in-out infinite reverse;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(20px, -20px);
+    }
+  }
+
+  /* ========================================
+   RESPONSIVE - TABLET
+   ======================================== */
+@media (max-width: 1024px) {
+    .match-teams {
+        gap: var(--space-4);
+    }
+
+    .team-shield-container {
+        width: 80px;
+        height: 93px;
+    }
+
+    .team-code {
+        font-size: 2rem;
+    }
+}
+
+/* ========================================
+   RESPONSIVE - MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+
+    .hero-content {
+        padding: 120px var(--space-4) var(--space-12);
+    }
+
+    .match-card {
+        padding: var(--space-6);
+        border-radius: 16px;
+    }
+
+    .match-teams {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .team {
+        flex-direction: row;
+        gap: var(--space-4);
+    }
+
+    .team-shield-container {
+        width: 60px;
+        height: 70px;
+    }
+
+    .team-code {
+        font-size: 1.5rem;
+    }
+
+    .match-vs {
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        gap: var(--space-4);
+    }
+
+    .vs-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    .match-datetime {
+        text-align: left;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-block {
+        min-width: 50px;
+    }
+
+    .countdown-separator {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-badge {
+        padding: var(--space-2) var(--space-3);
+    }
+
+    .badge-text {
+        font-size: 0.75rem;
+    }
+
+    .match-header {
+        flex-direction: column;
+        gap: var(--space-2);
+        text-align: center;
+    }
+
+    .countdown-timer {
+        flex-wrap: wrap;
+    }
+
+    .countdown-block {
+        min-width: 45px;
+    }
+
+    .countdown-number {
+        font-size: 1.75rem;
+    }
+
+    .match-venue {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
