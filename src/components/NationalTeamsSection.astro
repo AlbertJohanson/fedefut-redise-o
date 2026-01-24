@@ -332,6 +332,10 @@
   }
 
   .national-teams-section .container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
     position: relative;
     z-index: 1;
   }
@@ -668,22 +672,32 @@
   /* ========================================
    SELECCIONES RESPONSIVE STYLES
    ======================================== */
-@media (max-width: 1200px) {
+  @media (max-width: 1200px) {
     .national-teams-grid {
-        grid-template-rows: repeat(3, 240px);
+      grid-template-rows: repeat(3, 240px);
     }
 
-    .national-teams-card:nth-child(1) { grid-column: span 6; }
-    .national-teams-card:nth-child(2) { grid-column: span 6; }
-    .national-teams-card:nth-child(3) { grid-column: span 4; }
-    .national-teams-card:nth-child(4) { grid-column: span 4; }
-    .national-teams-card:nth-child(5) { grid-column: span 4; }
-}
+    .national-teams-card:nth-child(1) {
+      grid-column: span 6;
+    }
+    .national-teams-card:nth-child(2) {
+      grid-column: span 6;
+    }
+    .national-teams-card:nth-child(3) {
+      grid-column: span 4;
+    }
+    .national-teams-card:nth-child(4) {
+      grid-column: span 4;
+    }
+    .national-teams-card:nth-child(5) {
+      grid-column: span 4;
+    }
+  }
 
-@media (max-width: 900px) {
+  @media (max-width: 900px) {
     .national-teams-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
     }
 
     .national-teams-card:nth-child(1),
@@ -691,51 +705,51 @@
     .national-teams-card:nth-child(3),
     .national-teams-card:nth-child(4),
     .national-teams-card:nth-child(5) {
-        grid-column: span 1;
-        min-height: 280px;
+      grid-column: span 1;
+      min-height: 280px;
     }
 
     .national-teams-card:nth-child(5) {
-        grid-column: span 2;
+      grid-column: span 2;
     }
 
     .card-title {
-        font-size: 1.5rem !important;
+      font-size: 1.5rem !important;
     }
 
     .card-description {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .card-stats {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
 
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
     .national-teams {
-        padding: var(--space-16) 0;
+      padding: var(--space-16) 0;
     }
 
     .national-teams .national-teams-title {
-        font-size: 2.25rem;
+      font-size: 2.25rem;
     }
 
     .national-teams-teams-nav {
-        gap: var(--space-2);
-        padding: 0 var(--space-2);
+      gap: var(--space-2);
+      padding: 0 var(--space-2);
     }
 
     .national-teams-nav-btn {
-        padding: var(--space-2) var(--space-4);
-        font-size: 0.75rem;
+      padding: var(--space-2) var(--space-4);
+      font-size: 0.75rem;
     }
 
     .national-teams-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
+      grid-template-columns: 1fr;
+      gap: var(--space-4);
     }
 
     .national-teams-card:nth-child(1),
@@ -743,59 +757,67 @@
     .national-teams-card:nth-child(3),
     .national-teams-card:nth-child(4),
     .national-teams-card:nth-child(5) {
-        grid-column: span 1;
-        min-height: 240px;
+      grid-column: span 1;
+      min-height: 240px;
     }
 
     .card-content {
-        padding: var(--space-5);
-        padding-bottom: var(--space-6);
+      padding: var(--space-5);
+      padding-bottom: var(--space-6);
     }
 
     .card-description {
-        opacity: 1;
-        transform: translateY(0);
-        font-size: 0.75rem;
+      opacity: 1;
+      transform: translateY(0);
+      font-size: 0.75rem;
     }
 
     .card-stats {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
 
-/* ========================================
+  /* ========================================
    RESPONSIVE - TABLET
    ======================================== */
-@media (max-width: 1024px) {
-
+  @media (max-width: 1024px) {
     .national-teams-grid {
-        grid-template-rows: repeat(3, 240px);
+      grid-template-rows: repeat(3, 240px);
     }
 
-    .national-teams-card:nth-child(1) { grid-column: span 6; }
-    .national-teams-card:nth-child(2) { grid-column: span 6; }
-    .national-teams-card:nth-child(3) { grid-column: span 4; }
-    .national-teams-card:nth-child(4) { grid-column: span 4; }
-    .national-teams-card:nth-child(5) { grid-column: span 4; }
-}
+    .national-teams-card:nth-child(1) {
+      grid-column: span 6;
+    }
+    .national-teams-card:nth-child(2) {
+      grid-column: span 6;
+    }
+    .national-teams-card:nth-child(3) {
+      grid-column: span 4;
+    }
+    .national-teams-card:nth-child(4) {
+      grid-column: span 4;
+    }
+    .national-teams-card:nth-child(5) {
+      grid-column: span 4;
+    }
+  }
 
-/* ========================================
+  /* ========================================
    RESPONSIVE - MOBILE
    ======================================== */
-@media (max-width: 768px) {
-
+  @media (max-width: 768px) {
     .national-teams-title {
-        font-size: 2rem;
+      font-size: 2rem;
     }
 
     .national-teams-section {
-        padding: var(--space-12) var(--space-3);
+      padding: var(--space-12) var(--space-3);
     }
 
     .national-teams-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
     }
 
     .national-teams-card:nth-child(1),
@@ -803,13 +825,13 @@
     .national-teams-card:nth-child(3),
     .national-teams-card:nth-child(4),
     .national-teams-card:nth-child(5) {
-        grid-column: span 1;
-        min-height: 260px;
+      grid-column: span 1;
+      min-height: 260px;
     }
 
     .card-description {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0);
     }
-}
+  }
 </style>
