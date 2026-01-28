@@ -1,0 +1,256 @@
+---
+import { callSafely } from "astro:actions";
+
+interface Champion {
+  nombre: string;
+  logo: string;
+}
+
+interface Props {
+  id: number;
+  nombre: string;
+  equipos: number;
+  logoLiga: string;
+  campeon: Champion;
+}
+
+const { id, nombre, equipos, logoLiga, campeon } = Astro.props;
+---
+
+<article class="liga-card">
+  <div class="liga-card-inner">
+    <div class="liga-logo-container">
+      <div class="liga-logo-bg"></div>
+      <div class="liga-logo-placeholder">
+        <img src={logoLiga} alt={nombre} />
+      </div>
+    </div>
+    <div class="liga-info">
+      <h3 class="liga-name">{nombre}</h3>
+      <span class="liga-teams">{equipos} equipos</span>
+    </div>
+    <!-- <div class="liga-champion">
+      <div class="champion-icon">
+        <img src={campeon.logo} alt={campeon.nombre} />
+      </div>
+      <div class="champion-info">
+        <span class="champion-label">Campeón</span>
+        <span class="champion-name">{campeon.nombre}</span>
+      </div>
+    </div> -->
+  </div>
+</article>
+
+<style>
+  .liga-card {
+    position: relative;
+    background: var(--color-white);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out);
+    box-shadow: 0 4px 20px rgba(0, 56, 118, 0.06);
+  }
+
+  .liga-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+      90deg,
+      var(--color-primary),
+      var(--color-secondary)
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .liga-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(0, 56, 118, 0.15);
+  }
+
+  .liga-card:hover::before {
+    opacity: 1;
+  }
+
+  .liga-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-8) var(--space-5);
+    text-align: center;
+    height: 100%;
+  }
+
+  /* Liga Logo Container */
+  .liga-logo-container {
+    position: relative;
+    margin-bottom: var(--space-6);
+  }
+
+  .liga-logo-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(
+      circle,
+      rgba(0, 56, 118, 0.06) 0%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    transition: all 0.4s ease;
+  }
+
+  .liga-card:hover .liga-logo-bg {
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(
+      circle,
+      rgba(73, 151, 208, 0.12) 0%,
+      transparent 70%
+    );
+  }
+
+  .liga-logo-placeholder {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+
+  .liga-logo-placeholder img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .liga-card:hover .liga-logo-placeholder {
+    transform: scale(1.08);
+  }
+
+  /* Different colored logos */
+  .liga-logo-2 {
+    background: linear-gradient(145deg, #0066cc, #4997d0);
+  }
+  .liga-logo-3 {
+    background: linear-gradient(145deg, #4997d0, #6bb3e0);
+  }
+  .liga-logo-4 {
+    background: linear-gradient(145deg, #3a7bd5, #00d2ff);
+  }
+  .liga-logo-5 {
+    background: linear-gradient(145deg, #e91e63, #ff5252);
+  }
+  .liga-logo-6 {
+    background: linear-gradient(145deg, #00b4db, #0083b0);
+  }
+  .liga-logo-7 {
+    background: linear-gradient(145deg, #ff9800, #f44336);
+  }
+
+  /* Liga Info */
+  .liga-info {
+    margin-bottom: var(--space-5);
+    flex: 1;
+  }
+
+  .liga-name {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    color: var(--color-primary);
+    margin-bottom: var(--space-2);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+
+  .liga-teams {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-gray-500);
+    background: var(--color-gray-100);
+    padding: var(--space-1) var(--space-3);
+    border-radius: 20px;
+  }
+
+  /* Liga Champion Section */
+  .liga-champion {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    background: linear-gradient(
+      135deg,
+      rgba(0, 56, 118, 0.03),
+      rgba(73, 151, 208, 0.06)
+    );
+    border-radius: 12px;
+    width: 100%;
+    border: 1px solid rgba(0, 56, 118, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .liga-card:hover .liga-champion {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 56, 118, 0.05),
+      rgba(73, 151, 208, 0.1)
+    );
+    border-color: rgba(73, 151, 208, 0.15);
+  }
+
+  .champion-icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(255, 193, 7, 0.4);
+  }
+
+  .champion-icon svg {
+    width: 16px;
+    height: 16px;
+    color: #fff;
+  }
+
+  .champion-info {
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+  }
+
+  .champion-label {
+    display: block;
+    font-size: 0.5625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-accent);
+    margin-bottom: 2px;
+  }
+
+  .champion-name {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+</style>

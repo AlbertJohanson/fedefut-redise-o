@@ -1,0 +1,74 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nombre": "Liga Nacional",
+      "equipos": 12,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769464773/Fedefut/liga-bantrab_jqwe6r.png",
+      "campeon": {
+        "nombre": "Antigua GFC",
+        "logo": "/logos/campeones/comunicaciones.png"
+      }
+    },
+    {
+      "id": 2,
+      "nombre": "Primera División",
+      "equipos": 20,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769464774/Fedefut/liga-gana777_lvhcd8.png",
+      "campeon": {
+        "nombre": "Nueva Santa Rosa CDF",
+        "logo": "/logos/campeones/suchitepequez.png"
+      }
+    },
+    {
+      "id": 3,
+      "nombre": "Segunda División",
+      "equipos": 24,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769464775/Fedefut/liga2D_r055qf.jpg",
+      "campeon": {
+        "nombre": "Deportivo Amatitlan",
+        "logo": "/logos/campeones/aurora-fc.png"
+      }
+    },
+    {
+      "id": 4,
+      "nombre": "Tercera División",
+      "equipos": 32,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769465300/Fedefut/abfa_v8p4ue.png",
+      "campeon": {
+        "nombre": "CF Toros de Taxisco",
+        "logo": "/logos/campeones/sacachispas.png"
+      }
+    },
+    {
+      "id": 5,
+      "nombre": "Liga Femenil",
+      "equipos": 10,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769464773/Fedefut/454286621_917166490451276_8215264377342916517_n_a7znd2.jpg",
+      "campeon": {
+        "nombre": "Cuilco Femenino FC ",
+        "logo": "/logos/campeones/unifut-rosal.png"
+      }
+    },
+    {
+      "id": 6,
+      "nombre": "Fútbol Playa",
+      "equipos": 8,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769464765/Fedefut/ligaplaya_bvz9h2.png",
+      "campeon": {
+        "nombre": "Piratas FP",
+        "logo": "/logos/campeones/municipal.png"
+      }
+    },
+    {
+      "id": 7,
+      "nombre": "Liga de Futsal",
+      "equipos": 16,
+      "logoLiga": "https://res.cloudinary.com/ajweb/image/upload/v1769464765/Fedefut/ligafutsal_czuwxz.png",
+      "campeon": {
+        "nombre": "Por Definir",
+        "logo": ""
+      }
+    }
+  ]
+}

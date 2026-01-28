@@ -1,0 +1,140 @@
+[
+  {
+    "id": 1,
+    "name": "Umbro",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585858/Fedefut/Patrocinadores/Umbro_gpuoq4.jpg",
+    "alt": "Logo Umbro"
+  },
+  {
+    "id": 2,
+    "name": "Tortrix",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585857/Fedefut/Patrocinadores/Tortrix_q8dqet.jpg",
+    "alt": "Logo Tortrix"
+  },
+  {
+    "id": 3,
+    "name": "Tigo",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585856/Fedefut/Patrocinadores/Tigo_exffep.jpg",
+    "alt": "Logo Tigo"
+  },
+  {
+    "id": 4,
+    "name": "Suvisa",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585855/Fedefut/Patrocinadores/Suvisa_zojqda.jpg",
+    "alt": "Logo Suvisa"
+  },
+  {
+    "id": 5,
+    "name": "Soy 502",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585854/Fedefut/Patrocinadores/Soy502_jcocas.jpg",
+    "alt": "Logo Soy 502"
+  },
+  {
+    "id": 6,
+    "name": "Sportline",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585854/Fedefut/Patrocinadores/Sportline_qolaso.jpg",
+    "alt": "Logo Sportline"
+  },
+  {
+    "id": 7,
+    "name": "Pepsi",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585853/Fedefut/Patrocinadores/Pepsi_a9gjax.jpg",
+    "alt": "Logo Pepsi"
+  },
+  {
+    "id": 8,
+    "name": "Olimpia",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585852/Fedefut/Patrocinadores/Olimpia_eq6l2o.jpg",
+    "alt": "Logo Olimpia"
+  },
+  {
+    "id": 9,
+    "name": "Nuestro Diario",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585852/Fedefut/Patrocinadores/NuestroDiario_qii6xe.jpg",
+    "alt": "Logo Nuestro Diario"
+  },
+  {
+    "id": 10,
+    "name": "Molten",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585852/Fedefut/Patrocinadores/Molten_gsqpk0.jpg",
+    "alt": "Logo Molten"
+  },
+  {
+    "id": 11,
+    "name": "Mellen",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585851/Fedefut/Patrocinadores/Mellen_yqer97.jpg",
+    "alt": "Logo Mellen"
+  },
+  {
+    "id": 12,
+    "name": "Little Cesar Pizza",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585851/Fedefut/Patrocinadores/LCP_udzuep.jpg",
+    "alt": "Logo Little Cesar Pizza"
+  },
+  {
+    "id": 13,
+    "name": "LG",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585851/Fedefut/Patrocinadores/LG_dqii3j.png",
+    "alt": "Logo LG"
+  },
+  {
+    "id": 14,
+    "name": "Lanquetin",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585850/Fedefut/Patrocinadores/Lanquetin_lhxxem.jpg",
+    "alt": "Logo Lanquetin"
+  },
+  {
+    "id": 15,
+    "name": "Hielo Fiesta",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585850/Fedefut/Patrocinadores/HieloFiesta_rilij1.jpg",
+    "alt": "Logo Hielo Fiesta"
+  },
+  {
+    "id": 16,
+    "name": "Gana 77",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Gana77_pdo01c.jpg",
+    "alt": "Logo Gana 77"
+  },
+  {
+    "id": 17,
+    "name": "Gallo",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Gallo_poibxn.jpg",
+    "alt": "Logo Gallo"
+  },
+  {
+    "id": 18,
+    "name": "Forza",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Forza_plrxrd.jpg",
+    "alt": "Logo Forza"
+  },
+  {
+    "id": 19,
+    "name": "Bantrab",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Bantrab_awzjaw.jpg",
+    "alt": "Logo Bantrab"
+  },
+  {
+    "id": 20,
+    "name": "Café Quetzal",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/CafeQuetzal_u9xmpy.jpg",
+    "alt": "Logo Café Quetzal"
+  },
+  {
+    "id": 21,
+    "name": "Emporium",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Emporium_a7kabg.jpg",
+    "alt": "Logo Emporium"
+  },
+  {
+    "id": 22,
+    "name": "Ducal",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Ducal_uxgoka.jpg",
+    "alt": "Logo Ducal"
+  },
+  {
+    "id": 23,
+    "name": "Acquaroni",
+    "image": "https://res.cloudinary.com/ajweb/image/upload/v1769585849/Fedefut/Patrocinadores/Acquaroni_xzkxxd.jpg",
+    "alt": "Logo Acquaroni"
+  }
+]
